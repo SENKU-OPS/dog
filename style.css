@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Lato:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  height: 5rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+
+.header__inner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+}
+
+.header__logo {
+  font-family: "Arvo";
+  font-size: 2rem;
+}
+
+.header__nav {
+  height: 5rem;
+  width: 30vw;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30vw;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: "Lato";
+}
+
+.header__nav-links-container {
+  margin-right: 3rem;
+  padding: .5rem 0rem;
+  position: relative;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.header__nav-links-container--active {
+  margin-right: 0px;
+}
+
+.header__nav-links {
+  padding: .5rem .5rem;
+  position: relative;
+  font-family: "Lato";
+  z-index: 2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header__nav-links-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header__nav-links-container:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header__nav-links-container:hover .header__nav-links {
+  color: white;
+}
+
+.button {
+  color: white;
+  font-family: "Lato";
+  font-weight: bold;
+  width: 126px;
+  text-transform: uppercase;
+  padding: .6rem .7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.cto {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  width: 100px;
+  text-align: center;
+}
+
+.cto:hover,
+.sec-button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero {
+  padding: 0rem 3rem;
+  min-width: 100vw;
+  min-height: calc(100vh - 5rem);
+  background-color: #494972;
+  margin-top: 5rem;
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__inner-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+}
+
+.hero__why {
+  height: 200px;
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-weight: bolder;
+  margin-bottom: 1.2rem;
+  line-height: 2.3rem;
+  font-family: "Arvo";
+  width: 350px;
+}
+
+.hero__why-explained {
+  width: 420px;
+  font-family: "Lato";
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero__dog {
+  height: 490px;
+}
+
+@media only screen and (max-width: 800px) {
+  .header__inner-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80vw;
+  }
+  .header__nav {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    background-color: white;
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    z-index: 4;
+  }
+  .header__nav-list {
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 5;
+  }
+  .header__nav-links-container {
+    margin: 0;
+  }
+  .hero__inner-hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 700px;
+  }
+  .hero__heading {
+    margin-top: 4rem;
+  }
+  .hero__why-explained {
+    margin: 2rem 0rem;
+    width: 300px;
+  }
+  .hero__buttons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 130px;
+    height: 90px;
+    position: relative;
+  }
+  .hero__dog {
+    height: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

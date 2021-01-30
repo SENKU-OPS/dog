@@ -1,0 +1,62 @@
+.header__toggle-menu {
+  position: absolute;
+  right: 10vw;
+  cursor: pointer;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.header__toggle-bars {
+  width: 2rem;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: black;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.header__toggle-bar3 {
+  margin: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+
+.header__toggle-bar1 {
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+
+.header__toggle-bar2 {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .header__toggle-menu {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.show-nav {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.animate-bar2 {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.animate-bar1 {
+  -webkit-transform: rotateZ(-34deg) scaleX(0.9);
+          transform: rotateZ(-34deg) scaleX(0.9);
+}
+
+.animate-bar3 {
+  -webkit-transform: rotateZ(34deg) scaleX(0.9);
+          transform: rotateZ(34deg) scaleX(0.9);
+}
+/*# sourceMappingURL=toggle.css.map */
