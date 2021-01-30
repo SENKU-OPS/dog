@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Lato:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  height: 5rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header__logo {
+  font-family: "Arvo";
+  font-size: 2rem;
+}
+
+.header__nav {
+  height: 5rem;
+  width: 30vw;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30vw;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: "Lato";
+}
+
+.header__nav-links-container {
+  margin-right: 3rem;
+  padding: .5rem 0rem;
+  position: relative;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.header__nav-links-container--active {
+  margin-right: 0px;
+}
+
+.header__nav-links {
+  padding: .5rem .5rem;
+  position: relative;
+  font-family: "Lato";
+  z-index: 2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header__nav-links-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header__nav-links-container:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header__nav-links-container:hover .header__nav-links {
+  color: white;
+}
+
+.button {
+  color: white;
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .6rem .7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.cto {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  width: 100px;
+  text-align: center;
+}
+
+.cto:hover,
+.sec-button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.sec-button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hero {
+  padding: 0rem 3rem;
+  min-width: 100vw;
+  min-height: calc(100vh - 5rem);
+  background-color: #494972;
+  margin-top: 5rem;
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__why-and-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+}
+
+.hero__why {
+  height: 200px;
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-weight: bolder;
+  margin-bottom: 1.2rem;
+  line-height: 2.3rem;
+  font-family: "Arvo";
+}
+
+.hero__why-explained {
+  width: 420px;
+  font-family: "Lato";
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero__dog {
+  height: 490px;
+}
+/*# sourceMappingURL=style.css.map */
